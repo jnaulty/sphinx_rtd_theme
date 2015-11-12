@@ -27,7 +27,7 @@
     "src"
   ],
   "devDependencies": {
-    "wyrm": "~0.0.x"
+    "wyrm": "https://github.com/jnaulty/wyrm.git"
   },
   "dependencies": {
     "lato-googlefont": "*",
