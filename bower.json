@@ -1,7 +1,7 @@
 {
   "name": "sphinx-rtd-theme",
   "version": "0.1.9",
-  "homepage": "https://github.com/snide/wyrm",
+  "homepage": "https://github.com/jnaulty/wyrm",
   "authors": [
     "Dave Snider <dave.snider@gmail.com>"
   ],
@@ -27,7 +27,7 @@
     "src"
   ],
   "devDependencies": {
-    "wyrm": "https://github.com/jnaulty/wyrm.git"
+    "wyrm": "git://github.com/jnaulty/wyrm.git#8f2af9fee5fde5af3103b061398ef75889fa5a71"
   },
   "dependencies": {
     "lato-googlefont": "*",

@@ -3298,18 +3298,27 @@ input[type="radio"][disabled], input[type="checkbox"][disabled] {
 }
 
 .wy-switch {
+  position: relative;
+  display: block;
+  height: 24px;
+  margin-top: 12px;
+  cursor: pointer;
+}
+.wy-switch:before {
+  position: absolute;
+  content: "";
+  display: block;
+  left: 0;
+  top: 0;
   width: 36px;
   height: 12px;
-  margin: 12px 0;
-  position: relative;
   border-radius: 4px;
   background: #ccc;
-  cursor: pointer;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-.wy-switch:before {
+.wy-switch:after {
   position: absolute;
   content: "";
   display: block;
@@ -3323,28 +3332,26 @@ input[type="radio"][disabled], input[type="checkbox"][disabled] {
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-.wy-switch:after {
-  content: "false";
+.wy-switch span {
   position: absolute;
   left: 48px;
   display: block;
   font-size: 12px;
   color: #ccc;
+  line-height: 1;
 }
 
-.wy-switch.active {
+.wy-switch.active:before {
   background: #1e8449;
 }
-.wy-switch.active:before {
+.wy-switch.active:after {
   left: 24px;
   background: #27AE60;
 }
-.wy-switch.active:after {
-  content: "true";
-}
 
-.wy-switch.disabled, .wy-switch.active.disabled {
+.wy-switch.disabled {
   cursor: not-allowed;
+  opacity: 0.8;
 }
 
 .wy-control-group.wy-control-group-error .wy-form-message, .wy-control-group.wy-control-group-error > label {
@@ -3858,7 +3865,7 @@ div[class^='highlight'] td.code {
 }
 
 div[class^='highlight'] pre {
-  white-space: pre;
+  white-space: pre-wrap;
   margin: 0;
   padding: 12px 12px;
   font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
